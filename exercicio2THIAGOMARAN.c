@@ -6,21 +6,21 @@ float soma;
 
 int main(){
 
-    int i;
-    for(i=0;i<andares;i++){
-        printf("informe o número de funcionarios do andar %d: ",i+1);
+    int i=1;
+    do{
+        printf("informe o numero de funcionarios do andar %d: ",i);
         scanf("%d",&A[i]);
 
-        if(A[i]<0||A[i]>1000){
-            printf("O número é maior que 1,000 ou menor que 0");
-            break;
+        if(A[i]>0&&A[i]<1000){
+            soma += A[i];
+            printf("%2.f\n",soma);
+            i++;
+        }else{
+            return 0;
         }
 
-        soma += A[i];
-        printf("%2.f",soma);
-    }
 
-
-
+    }while(i<andares||A[i]<0||A[i]>1000);
+    
     return 0;
 }
