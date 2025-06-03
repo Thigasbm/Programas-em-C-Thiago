@@ -70,7 +70,9 @@ do{
     printf("Deseja repetir? (S/N): ");
     scanf(" %c",&continuar); //buffer de espaço para não bugar
 
-    if(continuar!='S'||continuar!='s'||continuar!='N'||continuar!='n'){
+    if((continuar=='S')||(continuar=='s')||(continuar=='N')||(continuar=='n')){
+        //pass
+    }else{
         printf("Valor informado indevidamente, finalizando programa...");
     }
 
